@@ -1,0 +1,20 @@
+<launch>
+    <arg name="gui" default="true"/>
+    <arg name="INPUT" default="/camera/depth_registered/points" />
+
+    <!--arg name="MANAGER" value="nodelet_manager" /-->
+    <!--node name="$(arg MANAGER)"
+        pkg="nodelet" type="nodelet" args="manager" /-->
+
+    <node name="pointcloud_to_voxel"
+        pkg="nodelet" type="nodelet"
+        args="standalone jsk_pcl/PointCloudToVoxel">
+        <remap from="~input" to="$(arg INPUT)"/>
+    </node>
+
+    <group if="$(arg gui)">
+        <node name="rviz"
+            pkg="rviz" type="rviz"
+            args="-d $(find jsk_pcl_ros)/config/pointcloud_to_voxel.rviz"/>
+    </group>
+</launch>
