@@ -320,6 +320,7 @@ jsk_pcl_nodelet(src/roi_clipper_nodelet.cpp
 jsk_pcl_nodelet_upstream(jsk_pcl_ros_utils "jsk_pcl/PointIndicesToMaskImage" "point_indices_to_mask_image")
 jsk_pcl_nodelet(src/extract_indices_nodelet.cpp
   "jsk_pcl/ExtractIndices" "extract_indices")
+jsk_pcl_nodelet_upstream(jsk_pcl_ros_utils "jsk_pcl/PointIndicesToPointCloud" "point_indices_to_pointcloud")
 jsk_pcl_nodelet_upstream(jsk_pcl_ros_utils "jsk_pcl/MaskImageToDepthConsideredMaskImage" "mask_image_to_depth_considered_mask_image")
 jsk_pcl_nodelet_upstream(jsk_pcl_ros_utils "jsk_pcl/MaskImageToPointIndices" "mask_image_to_point_indices")
 jsk_pcl_nodelet_upstream(jsk_pcl_ros_utils "jsk_pcl/OrganizedPointCloudToPointIndices" "organized_pointcloud_to_point_indices")
