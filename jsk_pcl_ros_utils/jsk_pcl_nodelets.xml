@@ -24,6 +24,11 @@
          type="jsk_pcl_ros_utils::LabelToClusterPointIndices"
          base_class_type="nodelet::Nodelet">
   </class>
+  <class name="jsk_pcl_utils/PointIndicesToPointCloud"
+         type="jsk_pcl_ros_utils::PointIndicesToPointCloud"
+         base_class_type="nodelet::Nodelet">
+    Extract point cloud with point indices
+  </class> 
   <class name="jsk_pcl_utils/MaskImageToDepthConsideredMaskImage"
          type="jsk_pcl_ros_utils::MaskImageToDepthConsideredMaskImage"
          base_class_type="nodelet::Nodelet">
